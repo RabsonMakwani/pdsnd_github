@@ -1,0 +1,109 @@
+#Question 1:Who has higher trip duration on average between males and females in chicago and new_york_city ?
+
+
+#trip duration by Gender in chicago
+library(ggplot2)
+ggplot(aes(x = Gender, y = `Trip Duration`), data = subset(chicago,!is.na(Gender))) +
+  geom_boxplot() +
+  coord_cartesian(ylim = c(0, 1500)) +
+  ggtitle("Trip Duration by Gender in Chicago") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(y = "Trip Duration", x = "Gender")
+
+#The code generates a summary on trip duration by gender in chicago
+by(chicago$`Trip Duration`, chicago$Gender, summary)
+
+#males have a median of 542.0 and females have a median of  648.0
+#Therefore on average females have higher trip duration in chicago than the males
+
+
+
+
+#trip duration by Gender in new_york_city
+library(ggplot2)
+ggplot(aes(x = Gender, y = `Trip Duration`),
+       data = subset(new_york_city,!is.na(Gender))) +
+  geom_boxplot() +
+  coord_cartesian(ylim = c(0, 1500)) +
+  ggtitle("Trip Duration by Gender in new_york_city") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(y = "Trip Duration", x = "Gender")
+
+#The code generates a summary on trip duration by gender in chicago
+by(new_york_city$`Trip Duration`, new_york_city$Gender, summary)
+
+#males have a median of 548.0 and females have a median of  648.0
+#Therefore on average females have higher trip duration in new_york_city than the males
+
+
+
+
+
+
+
+
+
+#Question 2: what is the relationship between the age of the user and trip duration in Chicago and new York City?
+
+
+#in new_york_city
+library(ggplot2)
+qplot(x = (2021 - `Birth Year`),
+      y = `Trip Duration`,
+      data = new_york_city) +
+  abline(2021-new_york_city$`Birth Year`,new_york_city$`Trip Duration`)
+  ggtitle('Relationship between Age of User and trip duration in new York City ') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(y = "Trip Duration", x = "Age of User")
+
+
+
+#in Chicago
+library(ggplot2)
+qplot(x = (2021 - `Birth Year`),
+      y = `Trip Duration`,
+      data = chicago) +
+  ggtitle('Relationship between Age of User and trip duration in Chicago') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(y = "Trip Duration", x = "Age of User")
+
+
+
+
+
+
+
+
+#Question 3:what are the counts of each user type in all the three cities
+
+#user type count in 
+library(ggplot2)
+qplot(x = `User Type`, data = chicago) +
+  coord_cartesian(ylim = c(0, 250000)) +
+  ggtitle("counts for each user type in chicago") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(y = "count", x = "User type")
+
+#table wil display count of each user type
+table(chicago$`User Type`)
+
+#user type count in new york city
+library(ggplot2)
+qplot(x = `User Type`, data = subset(new_york_city, !is.na(`User Type`))) +
+  ggtitle("counts for each user type in new_york_city") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(y = "count", x = "User type")
+
+#table wil display count of each user type
+table(new_york_city$`User Type`)
+
+#user type count in washington
+library(ggplot2)
+qplot(x = `User Type`, data = washington) +
+  coord_cartesian(ylim = c(0, 250000)) +
+  ggtitle("counts for each user type in washington") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(y = "count", x = "User type")
+
+#table wil display count of each user type
+table(washington$`User Type`)
