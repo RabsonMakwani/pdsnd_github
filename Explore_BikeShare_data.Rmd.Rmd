@@ -1,7 +1,7 @@
 #Question 1:Who has higher trip duration on average between males and females in chicago and new_york_city ?
 
 
-#trip duration by Gender in chicago
+#Differentiating trip duration by Gender in chicago
 library(ggplot2)
 ggplot(aes(x = Gender, y = `Trip Duration`), data = subset(chicago,!is.na(Gender))) +
   geom_boxplot() +
@@ -76,7 +76,7 @@ qplot(x = (2021 - `Birth Year`),
 
 #Question 3:what are the counts of each user type in all the three cities
 
-#user type count in 
+#user type count in Chicago
 library(ggplot2)
 qplot(x = `User Type`, data = chicago) +
   coord_cartesian(ylim = c(0, 250000)) +
