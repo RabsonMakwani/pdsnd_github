@@ -10,7 +10,7 @@ ggplot(aes(x = Gender, y = `Trip Duration`), data = subset(chicago,!is.na(Gender
   theme(plot.title = element_text(hjust = 0.5)) +
   labs(y = "Trip Duration", x = "Gender")
 
-#The code generates a summary on trip duration by gender in chicago
+# generate a summary on trip duration by gender in chicago
 by(chicago$`Trip Duration`, chicago$Gender, summary)
 
 #males have a median of 542.0 and females have a median of  648.0
@@ -29,7 +29,7 @@ ggplot(aes(x = Gender, y = `Trip Duration`),
   theme(plot.title = element_text(hjust = 0.5)) +
   labs(y = "Trip Duration", x = "Gender")
 
-#The code generates a summary on trip duration by gender in chicago
+# generate a summary on trip duration by gender in chicago
 by(new_york_city$`Trip Duration`, new_york_city$Gender, summary)
 
 #males have a median of 548.0 and females have a median of  648.0
@@ -105,5 +105,5 @@ qplot(x = `User Type`, data = washington) +
   theme(plot.title = element_text(hjust = 0.5)) +
   labs(y = "count", x = "User type")
 
-#table wil display count of each user type
+#display table count of each user type
 table(washington$`User Type`)
