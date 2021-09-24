@@ -1,5 +1,5 @@
 
-### project and README file created on  9/22/2021
+### project and README file created on  9/22/2021 Wednesday
 
 
 ### The title of the project is "Explore Bikeshare data"
