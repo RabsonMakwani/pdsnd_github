@@ -46,7 +46,7 @@ by(new_york_city$`Trip Duration`, new_york_city$Gender, summary)
 #Question 2: what is the relationship between the age of the user and trip duration in Chicago and new York City?
 
 
-#in new_york_city
+#new_york_city
 library(ggplot2)
 qplot(x = (2021 - `Birth Year`),
       y = `Trip Duration`,
@@ -58,7 +58,7 @@ qplot(x = (2021 - `Birth Year`),
 
 
 
-#in Chicago
+#In Chicago
 library(ggplot2)
 qplot(x = (2021 - `Birth Year`),
       y = `Trip Duration`,
