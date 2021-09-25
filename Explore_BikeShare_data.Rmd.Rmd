@@ -19,7 +19,7 @@ by(chicago$`Trip Duration`, chicago$Gender, summary)
 
 
 
-#trip duration by Gender in new_york_city
+#Trip duration by Gender in new_york_city
 library(ggplot2)
 ggplot(aes(x = Gender, y = `Trip Duration`),
        data = subset(new_york_city,!is.na(Gender))) +
