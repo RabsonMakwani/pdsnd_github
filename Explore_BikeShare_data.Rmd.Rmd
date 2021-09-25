@@ -10,7 +10,7 @@ ggplot(aes(x = Gender, y = `Trip Duration`), data = subset(chicago,!is.na(Gender
   theme(plot.title = element_text(hjust = 0.5)) +
   labs(y = "Trip Duration", x = "Gender")
 
-# generate a summary on trip duration by gender in chicago
+#Generate a summary on trip duration by gender in chicago
 by(chicago$`Trip Duration`, chicago$Gender, summary)
 
 #males have a median of 542.0 and females have a median of  648.0
