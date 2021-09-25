@@ -5,7 +5,7 @@
 ### The title of the project is "Explore Bikeshare data"
 
 
-### The project analyzed the Bikeshare datasets,the analysis involves comparing trip duration between males and females,finding the relationship between age and trip duration and count of the type of users
+### The project analyzses Bikeshare datasets,the analysis involves comparing trip duration between males and females,finding the relationship between age and trip duration and count of the type of users
 
 
 ### files used include;Explore_BikeShare_data.Rmd,Report_explore_Bikeshare_data.pdf and Explore_BikeShare_data.html
